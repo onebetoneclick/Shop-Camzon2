@@ -1,0 +1,6652 @@
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 1
+    - CSS Reset
+    - Root Variables
+    - Scrollbar
+    - Global Styles
+    - Typography
+=========================================================*/
+
+
+
+/*=========================================================
+    GOOGLE FONT
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/*=========================================================
+    RESET
+=========================================================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+
+
+/*=========================================================
+    ROOT VARIABLES
+=========================================================*/
+
+:root{
+
+    /* Colors */
+
+    --primary:#E61E25;
+    --primary-dark:#c5141c;
+
+    --secondary:#FFD54F;
+
+    --black:#111111;
+
+    --dark:#1A1A1A;
+
+    --gray:#555555;
+
+    --light-gray:#EEEEEE;
+
+    --background:#F7F8FC;
+
+    --white:#FFFFFF;
+
+    --green:#22C55E;
+
+    --orange:#F59E0B;
+
+    --blue:#2563EB;
+
+
+
+    /* Shadows */
+
+    --shadow-sm:
+    0 5px 15px rgba(0,0,0,.08);
+
+    --shadow-md:
+    0 12px 30px rgba(0,0,0,.12);
+
+    --shadow-lg:
+    0 25px 60px rgba(0,0,0,.18);
+
+
+
+    /* Radius */
+
+    --radius-sm:8px;
+
+    --radius-md:15px;
+
+    --radius-lg:24px;
+
+    --radius-xl:35px;
+
+
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+
+
+    /* Navbar */
+
+    --navbar-height:80px;
+
+
+
+    /* Max Width */
+
+    --container:1300px;
+
+}
+
+
+
+/*=========================================================
+    BODY
+=========================================================*/
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--dark);
+
+    line-height:1.6;
+
+    min-height:100vh;
+
+}
+
+
+
+/*=========================================================
+    SELECTION
+=========================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+
+
+/*=========================================================
+    IMAGES
+=========================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+    user-select:none;
+
+}
+
+
+
+/*=========================================================
+    LINKS
+=========================================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+/*=========================================================
+    BUTTON
+=========================================================*/
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+
+
+/*=========================================================
+    INPUT
+=========================================================*/
+
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+
+
+/*=========================================================
+    LIST
+=========================================================*/
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+/*=========================================================
+    CONTAINER
+=========================================================*/
+
+.container{
+
+    width:92%;
+
+    max-width:var(--container);
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+    HEADINGS
+=========================================================*/
+
+h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+    font-weight:600;
+
+}
+
+h4{
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+}
+
+
+
+p{
+
+    color:var(--gray);
+
+    font-size:1rem;
+
+}
+
+
+
+/*=========================================================
+    SECTION
+=========================================================*/
+
+section{
+
+    padding:90px 0;
+
+}
+
+
+
+/*=========================================================
+    PAGE HEADER
+=========================================================*/
+
+.page-header{
+
+    text-align:center;
+
+    padding-top:140px;
+
+    padding-bottom:70px;
+
+}
+
+.page-header h1{
+
+    color:var(--black);
+
+    margin-bottom:15px;
+
+}
+
+.page-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+    SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*=========================================================
+    COMMON TITLES
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+    SPACING HELPERS
+=========================================================*/
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mt-5{
+
+    margin-top:50px;
+
+}
+
+
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+.mb-5{
+
+    margin-bottom:50px;
+
+}
+
+
+
+/*=========================================================
+    FLEX HELPERS
+=========================================================*/
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+    GRID
+=========================================================*/
+
+.grid{
+
+    display:grid;
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+    CARD
+=========================================================*/
+
+.card{
+
+    background:var(--white);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+/*=========================================================
+    BADGE
+=========================================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    border-radius:50px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+/*=========================================================
+    DIVIDER
+=========================================================*/
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:#dddddd;
+
+    margin:25px 0;
+
+}
+
+
+
+/*=========================================================
+    HIDDEN
+=========================================================*/
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+
+/*=========================================================
+    FADE CLASS
+=========================================================*/
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 2
+    - Header
+    - Navbar
+    - Logo
+    - Navigation
+    - Search Button
+    - Cart Badge
+    - Mobile Menu
+=========================================================*/
+
+
+
+/*=========================================================
+    HEADER
+=========================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+
+
+/*=========================================================
+    NAVBAR
+=========================================================*/
+
+.navbar{
+
+    width:92%;
+
+    max-width:1300px;
+
+    height:80px;
+
+    margin:20px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+    NAVBAR ON SCROLL
+=========================================================*/
+
+.navbar.scrolled{
+
+    margin-top:10px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    background:rgba(255,255,255,.92);
+
+}
+
+
+
+/*=========================================================
+    LOGO
+=========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    white-space:nowrap;
+
+}
+
+
+
+.logo img{
+
+    width:52px;
+
+    height:52px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    transition:.35s ease;
+
+}
+
+
+
+.logo:hover img{
+
+    transform:rotate(-10deg) scale(1.08);
+
+}
+
+
+
+/*=========================================================
+    NAVIGATION LINKS
+=========================================================*/
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+
+
+.nav-links a{
+
+    color:var(--dark);
+
+    font-size:.98rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+    position:relative;
+
+}
+
+
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+
+
+/*=========================================================
+    UNDERLINE EFFECT
+=========================================================*/
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    transition:.35s ease;
+
+}
+
+
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+
+/*=========================================================
+    NAV ICONS
+=========================================================*/
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+
+/*=========================================================
+    SEARCH BUTTON
+=========================================================*/
+
+.nav-icons button{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#f4f4f4;
+
+    font-size:1.1rem;
+
+    transition:.35s ease;
+
+}
+
+
+
+.nav-icons button:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*=========================================================
+    CART ICON
+=========================================================*/
+
+.nav-icons a{
+
+    position:relative;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f4f4f4;
+
+    border-radius:50%;
+
+    font-size:1.25rem;
+
+    transition:.35s ease;
+
+}
+
+
+
+.nav-icons a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*=========================================================
+    CART COUNT
+=========================================================*/
+
+#cartCount{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px solid #fff;
+
+}
+
+
+
+/*=========================================================
+    MOBILE MENU BUTTON
+=========================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    background:#f4f4f4;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    cursor:pointer;
+
+}
+
+
+
+.menu-toggle span{
+
+    width:22px;
+
+    height:2px;
+
+    background:var(--dark);
+
+    transition:.35s ease;
+
+}
+
+
+
+/*=========================================================
+    MENU ANIMATION
+=========================================================*/
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:translateY(7px) rotate(45deg);
+
+}
+
+
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:translateY(-7px) rotate(-45deg);
+
+}
+
+
+
+/*=========================================================
+    MOBILE NAVIGATION
+=========================================================*/
+
+.mobile-nav{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:2000;
+
+    padding:120px 35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+    transition:.45s ease;
+
+    box-shadow:-15px 0 40px rgba(0,0,0,.15);
+
+}
+
+
+
+.mobile-nav.active{
+
+    right:0;
+
+}
+
+
+
+.mobile-nav a{
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.mobile-nav a:hover{
+
+    color:var(--primary);
+
+    padding-left:10px;
+
+}
+
+
+
+/*=========================================================
+    MOBILE OVERLAY
+=========================================================*/
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:1500;
+
+}
+
+
+
+.mobile-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+/*=========================================================
+    SEARCH BAR POPUP
+=========================================================*/
+
+.search-popup{
+
+    position:fixed;
+
+    top:110px;
+
+    left:50%;
+
+    transform:translateX(-50%) scale(.9);
+
+    width:92%;
+
+    max-width:650px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:3000;
+
+}
+
+
+
+.search-popup.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) scale(1);
+
+}
+
+
+
+.search-popup input{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    background:#f5f5f5;
+
+    border-radius:15px;
+
+    padding:0 20px;
+
+    font-size:1rem;
+
+}
+
+
+
+/*=========================================================
+    NAVBAR SHADOW EFFECT
+=========================================================*/
+
+.navbar:hover{
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 3
+    - Hero Section
+    - Hero Buttons
+    - Hero Image
+    - Search Section
+    - Categories
+    - Featured Products
+=========================================================*/
+
+
+
+/*=========================================================
+    HERO SECTION
+=========================================================*/
+
+.hero{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:140px auto 80px;
+
+    min-height:700px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+
+/*=========================================================
+    HERO CONTENT
+=========================================================*/
+
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    padding:10px 22px;
+
+    background:rgba(230,30,37,.12);
+
+    color:var(--primary);
+
+    border-radius:50px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-content h1{
+
+    color:var(--black);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-content p{
+
+    font-size:1.1rem;
+
+    max-width:550px;
+
+    margin-bottom:35px;
+
+    color:var(--gray);
+
+}
+
+
+
+/*=========================================================
+    HERO BUTTONS
+=========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(230,30,37,.30);
+
+}
+
+
+
+.primary-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    background:#fff;
+
+    color:var(--black);
+
+    border:2px solid #ddd;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.secondary-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+    HERO IMAGE
+=========================================================*/
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow-lg);
+
+    animation:floatImage 5s ease-in-out infinite;
+
+    transition:.4s;
+
+}
+
+
+
+.hero-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/*=========================================================
+    HERO GLOW
+=========================================================*/
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(230,30,37,.10);
+
+    filter:blur(70px);
+
+    z-index:-1;
+
+}
+
+
+
+/*=========================================================
+    SEARCH SECTION
+=========================================================*/
+
+.search-section{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:0 auto 90px;
+
+}
+
+
+
+.search-section input{
+
+    width:100%;
+
+    height:68px;
+
+    border:none;
+
+    background:#fff;
+
+    border-radius:60px;
+
+    padding:0 30px;
+
+    font-size:1rem;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.search-section input:focus{
+
+    box-shadow:0 0 0 4px rgba(230,30,37,.18);
+
+}
+
+
+
+/*=========================================================
+    CATEGORIES
+=========================================================*/
+
+.categories{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.categories h2{
+
+    margin-bottom:45px;
+
+}
+
+
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.category-card{
+
+    background:#fff;
+
+    padding:40px 20px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+
+
+.category-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.category-card{
+
+    font-size:3rem;
+
+}
+
+
+
+.category-card h3{
+
+    margin-top:18px;
+
+}
+
+
+
+/*=========================================================
+    FEATURED PRODUCTS
+=========================================================*/
+
+.featured-products{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.featured-products h2{
+
+    margin-bottom:45px;
+
+}
+
+
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+    PRODUCT CARD
+=========================================================*/
+
+.product-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.product-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+    PRODUCT TAG
+=========================================================*/
+
+.product-tag{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    z-index:10;
+
+}
+
+
+
+/*=========================================================
+    PRODUCT CONTENT
+=========================================================*/
+
+.product-card h3{
+
+    margin-top:25px;
+
+    padding:0 20px;
+
+}
+
+
+
+.stars{
+
+    margin:15px 0;
+
+    font-size:1rem;
+
+}
+
+
+
+.product-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*=========================================================
+    PRODUCT BUTTON
+=========================================================*/
+
+.product-card a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:calc(100% - 40px);
+
+    margin:0 20px 25px;
+
+    height:52px;
+
+    border-radius:15px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.product-card a:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*=========================================================
+    PRODUCT IMAGE WRAPPER
+=========================================================*/
+
+.product-card{
+
+    isolation:isolate;
+
+}
+
+
+
+.product-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.04),
+        transparent
+    );
+
+    pointer-events:none;
+
+}
+
+
+
+/*=========================================================
+    PRODUCT GRID SPACING
+=========================================================*/
+
+.product-grid>.product-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+/*=========================================================
+    SECTION SPACING
+=========================================================*/
+
+.categories,
+
+.featured-products{
+
+    padding-bottom:100px;
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 4
+    - Product Page
+    - Product Gallery
+    - Product Information
+    - Specifications
+    - Features
+    - Reviews
+    - Related Products
+=========================================================*/
+
+
+
+/*=========================================================
+    PRODUCT PAGE
+=========================================================*/
+
+.product-page{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:140px auto 100px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:start;
+
+}
+
+
+
+/*=========================================================
+    PRODUCT GALLERY
+=========================================================*/
+
+.product-gallery{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+.main-image{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.main-image img{
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.main-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/*=========================================================
+    THUMBNAILS
+=========================================================*/
+
+.thumbnail-gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+
+.thumbnail-gallery img{
+
+    width:100%;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border:2px solid transparent;
+
+}
+
+
+
+.thumbnail-gallery img:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+    PRODUCT INFO
+=========================================================*/
+
+.product-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.product-info .badge{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.product-info h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+    color:#f7b500;
+
+    font-size:1rem;
+
+}
+
+
+
+.rating span{
+
+    color:var(--gray);
+
+}
+
+
+
+.product-info h2{
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.product-info p{
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================================
+    STOCK
+=========================================================*/
+
+.availability,
+
+.delivery{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+    font-size:1rem;
+
+}
+
+
+
+/*=========================================================
+    QUANTITY
+=========================================================*/
+
+.quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:35px 0;
+
+}
+
+
+
+.quantity button{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow-sm);
+
+    font-size:1.3rem;
+
+    transition:.35s;
+
+}
+
+
+
+.quantity button:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+.quantity input{
+
+    width:80px;
+
+    height:45px;
+
+    border:none;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-size:1rem;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+
+/*=========================================================
+    BUTTONS
+=========================================================*/
+
+.product-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.product-buttons a{
+
+    flex:1;
+
+    min-width:220px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.product-buttons a:first-child{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+
+
+.product-buttons a:first-child:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+.product-buttons a:last-child{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:0 12px 25px rgba(230,30,37,.30);
+
+}
+
+
+
+.product-buttons a:last-child:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+    SPECIFICATIONS
+=========================================================*/
+
+.specifications{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+
+.specifications h2{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.specifications table{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    border-collapse:collapse;
+
+}
+
+
+
+.specifications td{
+
+    padding:22px 30px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+
+
+.specifications tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+
+.specifications td:first-child{
+
+    font-weight:600;
+
+}
+
+
+
+/*=========================================================
+    FEATURES LIST
+=========================================================*/
+
+.features-list{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+
+.features-list h2{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.features-list ul{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.features-list li{
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.features-list li:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+/*=========================================================
+    REVIEWS
+=========================================================*/
+
+.reviews{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+
+.reviews h2{
+
+    margin-bottom:40px;
+
+}
+
+
+
+.review-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    margin-bottom:25px;
+
+    transition:.35s;
+
+}
+
+
+
+.review-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.review-card p{
+
+    margin:18px 0;
+
+}
+
+
+
+/*=========================================================
+    RELATED PRODUCTS
+=========================================================*/
+
+.related-products{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+
+.related-products h2{
+
+    margin-bottom:40px;
+
+}
+
+
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.related-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.related-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+
+.related-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+
+
+.related-card h3{
+
+    padding:25px 20px 15px;
+
+}
+
+
+
+.related-card a{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0 20px 25px;
+
+    height:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.related-card a:hover{
+
+    background:var(--primary-dark);
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 5
+    - Cart Page
+    - Order Summary
+    - Coupon Section
+    - Checkout Page
+    - Checkout Form
+    - Order Summary
+=========================================================*/
+
+
+
+/*=========================================================
+    CART PAGE
+=========================================================*/
+
+.cart-container{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:40px auto 100px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+
+
+/*=========================================================
+    CART ITEMS
+=========================================================*/
+
+.cart-items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+/*=========================================================
+    CART ITEM
+=========================================================*/
+
+.cart-item{
+
+    display:grid;
+
+    grid-template-columns:140px 1fr auto auto auto;
+
+    gap:25px;
+
+    align-items:center;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.cart-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+/*=========================================================
+    CART IMAGE
+=========================================================*/
+
+.cart-image img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
+
+
+/*=========================================================
+    CART DETAILS
+=========================================================*/
+
+.cart-details h2{
+
+    font-size:1.35rem;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.cart-details p{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.cart-details h3{
+
+    color:var(--primary);
+
+}
+
+
+
+/*=========================================================
+    CART QUANTITY
+=========================================================*/
+
+.cart-quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.cart-quantity button{
+
+    width:40px;
+
+    height:40px;
+
+    background:#f4f4f4;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+
+
+.cart-quantity button:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+.cart-quantity input{
+
+    width:65px;
+
+    height:40px;
+
+    text-align:center;
+
+    border:none;
+
+    background:#f7f7f7;
+
+    border-radius:10px;
+
+}
+
+
+
+/*=========================================================
+    REMOVE BUTTON
+=========================================================*/
+
+.cart-remove button{
+
+    background:#ffeded;
+
+    color:var(--primary);
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.cart-remove button:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================================
+    ORDER SUMMARY
+=========================================================*/
+
+.cart-summary{
+
+    position:sticky;
+
+    top:120px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.cart-summary h2{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:18px 0;
+
+}
+
+
+
+.total{
+
+    font-size:1.15rem;
+
+}
+
+
+
+/*=========================================================
+    CHECKOUT BUTTON
+=========================================================*/
+
+.checkout-btn{
+
+    width:100%;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:30px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.checkout-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+    CONTINUE SHOPPING
+=========================================================*/
+
+.continue-shopping{
+
+    width:100%;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:18px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.continue-shopping:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================================
+    COUPON SECTION
+=========================================================*/
+
+.coupon-section{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.coupon-box{
+
+    display:flex;
+
+    margin-top:25px;
+
+    gap:15px;
+
+}
+
+
+
+.coupon-box input{
+
+    flex:1;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#fff;
+
+    padding:0 20px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.coupon-box button{
+
+    width:170px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.coupon-box button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*=========================================================
+    SHOPPING BENEFITS
+=========================================================*/
+
+.shopping-benefits{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.benefit-card{
+
+    background:#fff;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.benefit-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.benefit-card{
+
+    font-size:3rem;
+
+}
+
+
+
+.benefit-card h3{
+
+    margin:20px 0 10px;
+
+}
+
+
+
+/*=========================================================
+    CHECKOUT PAGE
+=========================================================*/
+
+.checkout-container{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:40px auto 100px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+}
+
+
+
+/*=========================================================
+    CHECKOUT FORM
+=========================================================*/
+
+.checkout-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+    CHECKOUT CARD
+=========================================================*/
+
+.checkout-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+
+.checkout-card h2{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.checkout-card input,
+
+.checkout-card textarea,
+
+.checkout-card select{
+
+    width:100%;
+
+    margin-bottom:18px;
+
+    height:56px;
+
+    border:none;
+
+    background:#f7f7f7;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+}
+
+
+
+.checkout-card textarea{
+
+    height:140px;
+
+    padding:18px;
+
+    resize:vertical;
+
+}
+
+
+
+.checkout-card label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+    font-weight:500;
+
+}
+
+
+
+/*=========================================================
+    ORDER SUMMARY
+=========================================================*/
+
+.order-summary{
+
+    position:sticky;
+
+    top:120px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.summary-product{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.summary-product img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+.summary-product h3{
+
+    font-size:1rem;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/*=========================================================
+    PLACE ORDER
+=========================================================*/
+
+.place-order-btn{
+
+    width:100%;
+
+    height:60px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:16px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-top:30px;
+
+    transition:.35s;
+
+}
+
+
+
+.place-order-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+    BACK TO CART
+=========================================================*/
+
+.back-cart{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:18px;
+
+    height:55px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.back-cart:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================================
+    CHECKOUT SECURITY
+=========================================================*/
+
+.checkout-security{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.security-card{
+
+    background:#fff;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.security-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.security-card{
+
+    font-size:3rem;
+
+}
+
+
+
+.security-card h3{
+
+    margin:18px 0;
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 6
+    - Settings Page
+    - Past Orders
+    - Status Badges
+    - Statistics
+    - Buttons
+=========================================================*/
+
+
+
+/*=========================================================
+    SETTINGS PAGE
+=========================================================*/
+
+.settings-container{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:40px auto 100px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+    SETTINGS CARD
+=========================================================*/
+
+.settings-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.settings-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.settings-card h2{
+
+    font-size:1.4rem;
+
+    margin-bottom:25px;
+
+    color:var(--black);
+
+}
+
+
+
+/*=========================================================
+    SETTING ITEM
+=========================================================*/
+
+.setting-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+
+
+.setting-item:last-child{
+
+    border-bottom:none;
+
+    margin-bottom:0;
+
+    padding-bottom:0;
+
+}
+
+
+
+/*=========================================================
+    SELECT BOX
+=========================================================*/
+
+.setting-item select{
+
+    min-width:140px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f5f5f5;
+
+    padding:0 12px;
+
+}
+
+
+
+/*=========================================================
+    IOS SWITCH
+=========================================================*/
+
+.switch{
+
+    position:relative;
+
+    width:55px;
+
+    height:30px;
+
+    display:inline-block;
+
+}
+
+
+
+.switch input{
+
+    display:none;
+
+}
+
+
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#cccccc;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:24px;
+
+    height:24px;
+
+    left:3px;
+
+    top:3px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    transition:.35s;
+
+}
+
+
+
+.switch input:checked + .slider{
+
+    background:var(--primary);
+
+}
+
+
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(25px);
+
+}
+
+
+
+/*=========================================================
+    SETTINGS BUTTON
+=========================================================*/
+
+.settings-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.settings-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.settings-btn.danger{
+
+    background:#dc2626;
+
+}
+
+
+
+.settings-btn.danger:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+/*=========================================================
+    SETTINGS LINKS
+=========================================================*/
+
+.setting-link{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+
+
+.setting-link:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.setting-link a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.setting-link a:hover{
+
+    color:var(--primary);
+
+    padding-left:8px;
+
+}
+
+
+
+/*=========================================================
+    PAST ORDERS
+=========================================================*/
+
+.orders-container{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+
+
+/*=========================================================
+    ORDER CARD
+=========================================================*/
+
+.order-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.order-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+/*=========================================================
+    ORDER HEADER
+=========================================================*/
+
+.order-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.order-top h2{
+
+    font-size:1.3rem;
+
+}
+
+
+
+/*=========================================================
+    STATUS BADGES
+=========================================================*/
+
+.status{
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+.status.delivered{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+
+
+.status.pending{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+
+
+.status.cancelled{
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+}
+
+
+
+/*=========================================================
+    ORDER PRODUCT
+=========================================================*/
+
+.order-product{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.order-product img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
+
+
+/*=========================================================
+    ORDER ACTIONS
+=========================================================*/
+
+.order-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+
+
+.order-actions a,
+
+.order-actions button{
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.order-actions a:hover,
+
+.order-actions button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*=========================================================
+    SEARCH ORDERS
+=========================================================*/
+
+.orders-search{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+.orders-search input{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:0 20px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+
+/*=========================================================
+    FILTER BUTTONS
+=========================================================*/
+
+.order-filters{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.order-filters button{
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.order-filters button.active,
+
+.order-filters button:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================================
+    EMPTY ORDERS
+=========================================================*/
+
+.empty-orders{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+
+
+.empty-orders a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.empty-orders a:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*=========================================================
+    ORDER STATISTICS
+=========================================================*/
+
+.order-stats{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.stat-card{
+
+    background:#fff;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.stat-card h2{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 7
+    - Terms & Conditions
+    - 404 Page
+    - Footer
+    - Social Links
+    - Newsletter
+=========================================================*/
+
+
+
+/*=========================================================
+    TERMS NAVIGATION
+=========================================================*/
+
+.terms-navigation{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.terms-navigation h2{
+
+    margin-bottom:25px;
+
+}
+
+.terms-navigation ul{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:18px;
+
+}
+
+.terms-navigation li{
+
+    list-style:none;
+
+}
+
+.terms-navigation a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    background:#f7f7f7;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.terms-navigation a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateX(8px);
+
+}
+
+
+
+/*=========================================================
+    TERMS CONTENT
+=========================================================*/
+
+.terms-container{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.terms-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.terms-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.terms-card h2{
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+}
+
+.terms-card p{
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================================
+    AGREEMENT
+=========================================================*/
+
+.terms-agreement{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:60px auto 100px;
+
+    text-align:center;
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.terms-agreement h2{
+
+    margin-bottom:20px;
+
+}
+
+.terms-agreement p{
+
+    margin-bottom:35px;
+
+}
+
+.terms-agreement a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.terms-agreement a:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+    404 PAGE
+=========================================================*/
+
+.error-page{
+
+    min-height:85vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 20px 100px;
+
+}
+
+.error-content{
+
+    max-width:750px;
+
+}
+
+.error-content h1{
+
+    font-size:10rem;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    text-shadow:8px 8px 25px rgba(230,30,37,.20);
+
+}
+
+.error-content h2{
+
+    margin-bottom:20px;
+
+}
+
+.error-content p{
+
+    margin-bottom:40px;
+
+}
+
+.error-content img{
+
+    width:320px;
+
+    margin:40px auto;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow-lg);
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+
+
+/*=========================================================
+    ERROR BUTTONS
+=========================================================*/
+
+.error-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.error-buttons a{
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.error-buttons a:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*=========================================================
+    QUICK LINKS
+=========================================================*/
+
+.quick-links{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding-bottom:100px;
+
+}
+
+.quick-links h2{
+
+    margin-bottom:40px;
+
+}
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+
+}
+
+.quick-grid a{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-sm);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.quick-grid a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*=========================================================
+    FOOTER
+=========================================================*/
+
+footer{
+
+    background:var(--dark);
+
+    color:#fff;
+
+    margin-top:100px;
+
+    padding:80px 20px 30px;
+
+}
+
+.footer-logo{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--secondary);
+
+    margin-bottom:40px;
+
+}
+
+
+
+/*=========================================================
+    FOOTER LINKS
+=========================================================*/
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-bottom:35px;
+
+}
+
+.footer-links a{
+
+    transition:.35s;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+    SOCIAL LINKS
+=========================================================*/
+
+.footer-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+.footer-social a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    font-size:1.3rem;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+
+
+/*=========================================================
+    NEWSLETTER
+=========================================================*/
+
+.newsletter{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.newsletter h2{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.newsletter p{
+
+    color:#d6d6d6;
+
+    margin-bottom:30px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.newsletter input{
+
+    flex:1;
+
+    min-width:260px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:0 25px;
+
+}
+
+.newsletter button{
+
+    height:60px;
+
+    padding:0 35px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.newsletter button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/*=========================================================
+    COPYRIGHT
+=========================================================*/
+
+footer p{
+
+    text-align:center;
+
+    color:#bdbdbd;
+
+    margin-top:20px;
+
+    font-size:.95rem;
+
+}
+
+
+
+/*=========================================================
+    FOOTER DIVIDER
+=========================================================*/
+
+footer hr{
+
+    background:rgba(255,255,255,.10);
+
+    margin:40px auto;
+
+    max-width:1200px;
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 8
+    - Animations
+    - Loading Spinner
+    - Skeleton Loading
+    - Hover Effects
+    - Ripple Effect
+    - Toast Notification
+    - Modal
+=========================================================*/
+
+
+
+/*=========================================================
+    FLOAT ANIMATION
+=========================================================*/
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    FADE UP
+=========================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    FADE DOWN
+=========================================================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    FADE LEFT
+=========================================================*/
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    FADE RIGHT
+=========================================================*/
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    ZOOM IN
+=========================================================*/
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    SPIN
+=========================================================*/
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    BOUNCE
+=========================================================*/
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    PULSE
+=========================================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+/*=========================================================
+    SHIMMER
+=========================================================*/
+
+@keyframes shimmer{
+
+    0%{
+
+        background-position:-450px 0;
+
+    }
+
+    100%{
+
+        background-position:450px 0;
+
+    }
+
+}
+
+
+
+/*=========================================================
+    ANIMATION CLASSES
+=========================================================*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.fade-down{
+
+    animation:fadeDown .8s ease both;
+
+}
+
+.fade-left{
+
+    animation:fadeLeft .8s ease both;
+
+}
+
+.fade-right{
+
+    animation:fadeRight .8s ease both;
+
+}
+
+.zoom-in{
+
+    animation:zoomIn .6s ease both;
+
+}
+
+.float{
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+.bounce{
+
+    animation:bounce 2s infinite;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+/*=========================================================
+    LOADING SPINNER
+=========================================================*/
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid #ececec;
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+    FULL SCREEN LOADER
+=========================================================*/
+
+.loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+
+
+/*=========================================================
+    SKELETON
+=========================================================*/
+
+.skeleton{
+
+    border-radius:12px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #eeeeee 25%,
+
+        #f6f6f6 50%,
+
+        #eeeeee 75%
+
+    );
+
+    background-size:600px 100%;
+
+    animation:shimmer 1.4s infinite;
+
+}
+
+
+
+/*=========================================================
+    IMAGE SKELETON
+=========================================================*/
+
+.skeleton-image{
+
+    width:100%;
+
+    height:260px;
+
+}
+
+
+
+/*=========================================================
+    TEXT SKELETON
+=========================================================*/
+
+.skeleton-text{
+
+    height:18px;
+
+    margin:15px 0;
+
+}
+
+
+
+/*=========================================================
+    BUTTON EFFECT
+=========================================================*/
+
+.primary-btn,
+
+.secondary-btn,
+
+.settings-btn,
+
+.checkout-btn,
+
+.place-order-btn,
+
+.product-card a,
+
+.order-actions a,
+
+.order-actions button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/*=========================================================
+    RIPPLE EFFECT
+=========================================================*/
+
+.primary-btn::before,
+
+.secondary-btn::before,
+
+.settings-btn::before,
+
+.checkout-btn::before,
+
+.place-order-btn::before,
+
+.product-card a::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    background:rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+
+
+.primary-btn:hover::before,
+
+.secondary-btn:hover::before,
+
+.settings-btn:hover::before,
+
+.checkout-btn:hover::before,
+
+.place-order-btn:hover::before,
+
+.product-card a:hover::before{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+
+
+/*=========================================================
+    IMAGE HOVER
+=========================================================*/
+
+.product-card img,
+
+.related-card img,
+
+.cart-image img,
+
+.order-product img,
+
+.main-image img{
+
+    transition:.45s ease;
+
+}
+
+
+
+.product-card:hover img,
+
+.related-card:hover img,
+
+.cart-item:hover img,
+
+.order-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/*=========================================================
+    CARD HOVER
+=========================================================*/
+
+.card,
+
+.category-card,
+
+.settings-card,
+
+.review-card,
+
+.related-card,
+
+.order-card,
+
+.stat-card{
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover,
+
+.category-card:hover,
+
+.settings-card:hover,
+
+.review-card:hover,
+
+.related-card:hover,
+
+.order-card:hover,
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/*=========================================================
+    TOAST
+=========================================================*/
+
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    min-width:320px;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:var(--dark);
+
+    color:#fff;
+
+    box-shadow:var(--shadow-lg);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px);
+
+    transition:.35s;
+
+    z-index:5000;
+
+}
+
+
+
+.toast.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+
+
+.toast.success{
+
+    background:var(--green);
+
+}
+
+
+
+.toast.error{
+
+    background:#dc2626;
+
+}
+
+
+
+.toast.warning{
+
+    background:var(--orange);
+
+}
+
+
+
+/*=========================================================
+    MODAL
+=========================================================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9000;
+
+}
+
+
+
+.modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.modal-content{
+
+    width:92%;
+
+    max-width:650px;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    animation:zoomIn .4s ease;
+
+}
+
+
+
+/*=========================================================
+    SCROLL TO TOP
+=========================================================*/
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:var(--shadow-lg);
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:1000;
+
+}
+
+
+
+.scroll-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.scroll-top:hover{
+
+    transform:translateY(-8px);
+
+    background:var(--primary-dark);
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 9
+    - Responsive Design
+    - Large Screens
+    - Laptops
+    - Tablets
+    - Mobile
+    - Small Phones
+=========================================================*/
+
+
+
+/*=========================================================
+    LARGE DESKTOP
+=========================================================*/
+
+@media (min-width:1600px){
+
+.container{
+
+    max-width:1500px;
+
+}
+
+.hero{
+
+    min-height:850px;
+
+}
+
+.hero-content h1{
+
+    font-size:5rem;
+
+}
+
+.product-grid{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+
+
+/*=========================================================
+    LAPTOP
+=========================================================*/
+
+@media (max-width:1200px){
+
+.hero{
+
+    gap:40px;
+
+}
+
+.product-page{
+
+    gap:40px;
+
+}
+
+.cart-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.checkout-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.cart-summary,
+
+.order-summary{
+
+    position:relative;
+
+    top:0;
+
+}
+
+}
+
+
+
+/*=========================================================
+    TABLET
+=========================================================*/
+
+@media (max-width:992px){
+
+.nav-links{
+
+    display:none;
+
+}
+
+.menu-toggle{
+
+    display:flex;
+
+}
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    order:2;
+
+    align-items:center;
+
+}
+
+.hero-image{
+
+    order:1;
+
+}
+
+.hero-content p{
+
+    max-width:650px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.product-page{
+
+    grid-template-columns:1fr;
+
+}
+
+.thumbnail-gallery{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.settings-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.order-product{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    gap:20px;
+
+}
+
+.newsletter form{
+
+    flex-direction:column;
+
+}
+
+.newsletter button{
+
+    width:100%;
+
+}
+
+.newsletter input{
+
+    width:100%;
+
+}
+
+}
+
+
+
+/*=========================================================
+    MOBILE
+=========================================================*/
+
+@media (max-width:768px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.navbar{
+
+    padding:0 20px;
+
+    height:70px;
+
+}
+
+.logo span{
+
+    display:none;
+
+}
+
+.hero{
+
+    margin-top:120px;
+
+}
+
+.hero-content h1{
+
+    font-size:2.8rem;
+
+}
+
+.hero-content p{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+    width:100%;
+
+}
+
+.page-header{
+
+    padding-top:120px;
+
+}
+
+.page-header h1{
+
+    font-size:2.7rem;
+
+}
+
+.product-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.category-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.cart-item{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.cart-image img{
+
+    margin:auto;
+
+}
+
+.cart-quantity{
+
+    justify-content:center;
+
+}
+
+.summary-row{
+
+    font-size:.95rem;
+
+}
+
+.checkout-card{
+
+    padding:25px;
+
+}
+
+.specifications td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.order-top{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    text-align:center;
+
+}
+
+.order-actions{
+
+    justify-content:center;
+
+}
+
+.quick-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-links{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+}
+
+
+
+/*=========================================================
+    SMALL MOBILE
+=========================================================*/
+
+@media (max-width:576px){
+
+.container{
+
+    width:95%;
+
+}
+
+.hero{
+
+    margin-top:110px;
+
+}
+
+.hero-content h1{
+
+    font-size:2.2rem;
+
+}
+
+.hero-image img{
+
+    max-width:100%;
+
+}
+
+.main-image img{
+
+    height:350px;
+
+}
+
+.thumbnail-gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.category-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.settings-card{
+
+    padding:20px;
+
+}
+
+.setting-item{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.order-product img{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+.error-content h1{
+
+    font-size:6rem;
+
+}
+
+.error-content img{
+
+    width:220px;
+
+}
+
+.error-buttons{
+
+    flex-direction:column;
+
+}
+
+.error-buttons a{
+
+    width:100%;
+
+}
+
+.newsletter{
+
+    width:95%;
+
+}
+
+.toast{
+
+    left:15px;
+
+    right:15px;
+
+    min-width:auto;
+
+}
+
+.scroll-top{
+
+    width:50px;
+
+    height:50px;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+}
+
+
+
+/*=========================================================
+    EXTRA SMALL DEVICES
+=========================================================*/
+
+@media (max-width:400px){
+
+.hero-content h1{
+
+    font-size:1.9rem;
+
+}
+
+.page-header h1{
+
+    font-size:2rem;
+
+}
+
+h2{
+
+    font-size:1.6rem;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+    padding:14px 20px;
+
+}
+
+.product-card{
+
+    border-radius:18px;
+
+}
+
+.settings-card{
+
+    border-radius:18px;
+
+}
+
+.review-card{
+
+    padding:25px;
+
+}
+
+.checkout-card{
+
+    padding:20px;
+
+}
+
+.cart-summary,
+
+.order-summary{
+
+    padding:20px;
+
+}
+
+.footer-logo{
+
+    font-size:1.6rem;
+
+}
+
+}
+
+
+
+/*=========================================================
+    LANDSCAPE PHONES
+=========================================================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+.hero{
+
+    min-height:auto;
+
+    padding-top:120px;
+
+}
+
+.mobile-nav{
+
+    overflow-y:auto;
+
+}
+
+}
+
+
+
+/*=========================================================
+    REDUCE ANIMATION
+=========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}
+
+
+
+/*=========================================================
+    HIGH RESOLUTION DISPLAYS
+=========================================================*/
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi){
+
+img{
+
+    image-rendering:auto;
+
+}
+
+}
+/*=========================================================
+    SHOP CAMZON V2
+    STYLE.CSS
+
+    PART 10
+    - Dark Mode
+    - Utility Classes
+    - Accessibility
+    - Print Styles
+    - Final Polish
+=========================================================*/
+
+
+
+/*=========================================================
+    DARK MODE
+=========================================================*/
+
+body.dark-mode{
+
+    --background:#111827;
+
+    --white:#1F2937;
+
+    --dark:#F9FAFB;
+
+    --black:#FFFFFF;
+
+    --gray:#D1D5DB;
+
+    background:var(--background);
+
+    color:var(--dark);
+
+}
+
+body.dark-mode .navbar,
+
+body.dark-mode .card,
+
+body.dark-mode .product-card,
+
+body.dark-mode .settings-card,
+
+body.dark-mode .checkout-card,
+
+body.dark-mode .cart-item,
+
+body.dark-mode .order-card,
+
+body.dark-mode .review-card,
+
+body.dark-mode .terms-card,
+
+body.dark-mode .cart-summary,
+
+body.dark-mode .order-summary,
+
+body.dark-mode .stat-card{
+
+    background:#1F2937;
+
+    color:#F9FAFB;
+
+}
+
+body.dark-mode input,
+
+body.dark-mode textarea,
+
+body.dark-mode select{
+
+    background:#374151;
+
+    color:#FFFFFF;
+
+}
+
+body.dark-mode .footer{
+
+    background:#000;
+
+}
+
+
+
+/*=========================================================
+    FOCUS STATES
+=========================================================*/
+
+a:focus,
+
+button:focus,
+
+input:focus,
+
+textarea:focus,
+
+select:focus{
+
+    outline:3px solid rgba(230,30,37,.35);
+
+    outline-offset:4px;
+
+}
+
+
+
+/*=========================================================
+    DISABLED
+=========================================================*/
+
+button:disabled,
+
+input:disabled,
+
+select:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/*=========================================================
+    LAZY IMAGES
+=========================================================*/
+
+img{
+
+    transition:opacity .4s ease;
+
+}
+
+img[loading="lazy"]{
+
+    opacity:.98;
+
+}
+
+
+
+/*=========================================================
+    SECTION REVEAL
+=========================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+
+
+/*=========================================================
+    GLASS EFFECT
+=========================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+
+/*=========================================================
+    SHADOW HELPERS
+=========================================================*/
+
+.shadow-sm{
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.shadow-md{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.shadow-lg{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+
+/*=========================================================
+    BORDER RADIUS
+=========================================================*/
+
+.rounded-sm{
+
+    border-radius:var(--radius-sm);
+
+}
+
+.rounded-md{
+
+    border-radius:var(--radius-md);
+
+}
+
+.rounded-lg{
+
+    border-radius:var(--radius-lg);
+
+}
+
+.rounded-xl{
+
+    border-radius:var(--radius-xl);
+
+}
+
+
+
+/*=========================================================
+    TEXT HELPERS
+=========================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.text-success{
+
+    color:var(--green);
+
+}
+
+.text-warning{
+
+    color:var(--orange);
+
+}
+
+
+
+/*=========================================================
+    BACKGROUND HELPERS
+=========================================================*/
+
+.bg-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.bg-white{
+
+    background:#fff;
+
+}
+
+.bg-dark{
+
+    background:var(--dark);
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================================
+    DISPLAY HELPERS
+=========================================================*/
+
+.d-none{
+
+    display:none !important;
+
+}
+
+.d-flex{
+
+    display:flex;
+
+}
+
+.d-grid{
+
+    display:grid;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+
+
+/*=========================================================
+    WIDTH HELPERS
+=========================================================*/
+
+.w-100{
+
+    width:100%;
+
+}
+
+.h-100{
+
+    height:100%;
+
+}
+
+
+
+/*=========================================================
+    CURSOR
+=========================================================*/
+
+.pointer{
+
+    cursor:pointer;
+
+}
+
+
+
+/*=========================================================
+    OVERFLOW
+=========================================================*/
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+
+
+/*=========================================================
+    PRINT STYLE
+=========================================================*/
+
+@media print{
+
+header,
+
+footer,
+
+.navbar,
+
+.nav-icons,
+
+.hero,
+
+.newsletter,
+
+.error-buttons,
+
+.scroll-top{
+
+    display:none !important;
+
+}
+
+body{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+section{
+
+    padding:15px 0;
+
+}
+
+a{
+
+    color:#000;
+
+    text-decoration:none;
+
+}
+
+}
+
+
+
+/*=========================================================
+    ACCESSIBILITY
+=========================================================*/
+
+html{
+
+    -webkit-text-size-adjust:100%;
+
+}
+
+button,
+
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+/*=========================================================
+    SMOOTH PAGE LOADING
+=========================================================*/
+
+body{
+
+    animation:fadePage .5s ease;
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/*=========================================================
+    FINAL OPTIMIZATION
+=========================================================*/
+
+*{
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+
+
+/*=========================================================
+    END OF SHOP CAMZON STYLE.CSS
+=========================================================*/

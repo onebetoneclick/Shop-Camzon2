@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Past Orders | Shop Camzon</title>
+
+    <meta name="description" content="View your previous Shop Camzon orders.">
+
+    <link rel="icon" href="favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img src="https://i.ibb.co/b5nwfzZj/favicon-png.jpg" alt="Shop Camzon">
+
+            <span>SHOP CAMZON</span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="product.html">Products</a></li>
+
+            <li><a href="past-orders.html" class="active">Past Orders</a></li>
+
+            <li><a href="settings.html">Settings</a></li>
+
+        </ul>
+
+        <div class="nav-icons">
+
+            <button>🔍</button>
+
+            <a href="cart.html">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ===========================
+PAGE HEADER
+=========================== -->
+
+<section class="page-header">
+
+    <h1>Past Orders</h1>
+
+    <p>View all your previous purchases and order history.</p>
+
+</section>
+
+<!-- ===========================
+SEARCH
+=========================== -->
+
+<section class="orders-search">
+
+    <input
+        type="text"
+        placeholder="Search by Order ID, Product or Date">
+
+</section>
+
+<!-- ===========================
+FILTERS
+=========================== -->
+
+<section class="order-filters">
+
+    <button class="active">All</button>
+
+    <button>Delivered</button>
+
+    <button>Pending</button>
+
+    <button>Cancelled</button>
+
+</section>
+
+<!-- ===========================
+ORDER LIST
+=========================== -->
+
+<section class="orders-container">
+
+    <!-- ORDER CARD -->
+
+    <div class="order-card">
+
+        <div class="order-top">
+
+            <div>
+
+                <h2>#SCZ100001</h2>
+
+                <p>25 June 2026</p>
+
+            </div>
+
+            <span class="status delivered">
+
+                Delivered
+
+            </span>
+
+        </div>
+
+        <div class="order-product">
+
+            <img src="https://i.ibb.co/XrpC3j0X/Whats-App-Image-2026-06-27-at-12-41-10-PM.jpg" alt="AI Smart Tripod">
+
+            <div>
+
+                <h3>AI Smart Tracking Tripod</h3>
+
+                <p>Quantity: 1</p>
+
+                <h4>CFA 27,000</h4>
+
+            </div>
+
+        </div>
+
+        <div class="order-actions">
+
+            <a href="product.html">
+
+                Buy Again
+
+            </a>
+
+            <button>
+
+                View Receipt
+
+            </button>
+
+            <button>
+
+                Track Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ORDER CARD -->
+
+    <div class="order-card">
+
+        <div class="order-top">
+
+            <div>
+
+                <h2>#SCZ100002</h2>
+
+                <p>19 June 2026</p>
+
+            </div>
+
+            <span class="status pending">
+
+                Pending
+
+            </span>
+
+        </div>
+
+        <div class="order-product">
+
+            <img src="https://i.ibb.co/XrpC3j0X/Whats-App-Image-2026-06-27-at-12-41-10-PM.jpg" alt="AI Smart Tripod">
+
+            <div>
+
+                <h3>AI Smart Tracking Tripod</h3>
+
+                <p>Quantity: 2</p>
+
+                <h4>CFA 54,000</h4>
+
+            </div>
+
+        </div>
+
+        <div class="order-actions">
+
+            <button>
+
+                View Receipt
+
+            </button>
+
+            <button>
+
+                Track Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+EMPTY STATE
+=========================== -->
+
+<section class="empty-orders">
+
+    <h2>No More Orders</h2>
+
+    <p>Your future orders will appear here.</p>
+
+    <a href="index.html">
+
+        Continue Shopping
+
+    </a>
+
+</section>
+
+<!-- ===========================
+ORDER STATISTICS
+=========================== -->
+
+<section class="order-stats">
+
+    <div class="stat-card">
+
+        <h2>2</h2>
+
+        <p>Total Orders</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>1</h2>
+
+        <p>Delivered</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>1</h2>
+
+        <p>Pending</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>CFA 81,000</h2>
+
+        <p>Total Spent</p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        SHOP CAMZON
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Products</a>
+
+        <a href="cart.html">Cart</a>
+
+        <a href="checkout.html">Checkout</a>
+
+        <a href="past-orders.html">Past Orders</a>
+
+        <a href="settings.html">Settings</a>
+
+    </div>
+
+    <div class="footer-social">
+
+        Facebook
+
+        Instagram
+
+        WhatsApp
+
+    </div>
+
+    <p>
+
+        © 2026 Shop Camzon. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Shop Camzon</title>
+
+    <meta name="description" content="Manage your Shop Camzon settings.">
+
+    <link rel="icon" href="favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ==================================
+HEADER
+=================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img src="https://i.ibb.co/b5nwfzZj/favicon-png.jpg" alt="Shop Camzon">
+
+            <span>SHOP CAMZON</span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="product.html">Products</a></li>
+
+            <li><a href="past-orders.html">Past Orders</a></li>
+
+            <li><a href="settings.html" class="active">Settings</a></li>
+
+        </ul>
+
+        <div class="nav-icons">
+
+            <button>🔍</button>
+
+            <a href="cart.html">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ==================================
+PAGE HEADER
+=================================== -->
+
+<section class="page-header">
+
+    <h1>Settings</h1>
+
+    <p>Manage your preferences and personalize your shopping experience.</p>
+
+</section>
+
+<!-- ==================================
+SETTINGS
+=================================== -->
+
+<section class="settings-container">
+
+    <!-- Appearance -->
+
+    <div class="settings-card">
+
+        <h2>🎨 Appearance</h2>
+
+        <div class="setting-item">
+
+            <span>Dark Mode</span>
+
+            <label class="switch">
+
+                <input type="checkbox" id="darkMode">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-item">
+
+            <span>Animations</span>
+
+            <label class="switch">
+
+                <input type="checkbox" id="animations" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- Region -->
+
+    <div class="settings-card">
+
+        <h2>🌍 Region</h2>
+
+        <div class="setting-item">
+
+            <label>Currency</label>
+
+            <select id="currency">
+
+                <option>CFA</option>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>NGN</option>
+
+            </select>
+
+        </div>
+
+        <div class="setting-item">
+
+            <label>Language</label>
+
+            <select id="language">
+
+                <option>English</option>
+                <option>French</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <!-- Notifications -->
+
+    <div class="settings-card">
+
+        <h2>🔔 Notifications</h2>
+
+        <div class="setting-item">
+
+            <span>Email Notifications</span>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-item">
+
+            <span>Order Updates</span>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="setting-item">
+
+            <span>Promotions</span>
+
+            <label class="switch">
+
+                <input type="checkbox">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- Shopping -->
+
+    <div class="settings-card">
+
+        <h2>🛍 Shopping</h2>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Clear Cart
+
+            </button>
+
+        </div>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Clear Wishlist
+
+            </button>
+
+        </div>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Clear Recent Searches
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Storage -->
+
+    <div class="settings-card">
+
+        <h2>💾 Storage</h2>
+
+        <div class="setting-item">
+
+            <button class="settings-btn danger">
+
+                Clear Saved Data
+
+            </button>
+
+        </div>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Export Orders
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PWA -->
+
+    <div class="settings-card">
+
+        <h2>📱 App</h2>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Install App
+
+            </button>
+
+        </div>
+
+        <div class="setting-item">
+
+            <button class="settings-btn">
+
+                Check for Updates
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Help -->
+
+    <div class="settings-card">
+
+        <h2>❓ Help & Support</h2>
+
+        <div class="setting-link">
+
+            <a href="terms.html">
+
+                Terms & Conditions
+
+            </a>
+
+        </div>
+
+        <div class="setting-link">
+
+            <a href="#">
+
+                Privacy Policy
+
+            </a>
+
+        </div>
+
+        <div class="setting-link">
+
+            <a href="#">
+
+                Contact Support
+
+            </a>
+
+        </div>
+
+        <div class="setting-link">
+
+            <a href="#">
+
+                FAQ
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- About -->
+
+    <div class="settings-card">
+
+        <h2>ℹ About Shop Camzon</h2>
+
+        <p>
+
+            Version: 2.0.0
+
+        </p>
+
+        <p>
+
+            Build: July 2026
+
+        </p>
+
+        <p>
+
+            Designed & Developed by Shop Camzon.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==================================
+FOOTER
+=================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        SHOP CAMZON
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Products</a>
+
+        <a href="cart.html">Cart</a>
+
+        <a href="checkout.html">Checkout</a>
+
+        <a href="past-orders.html">Past Orders</a>
+
+        <a href="settings.html">Settings</a>
+
+    </div>
+
+    <div class="footer-social">
+
+        Facebook
+
+        Instagram
+
+        WhatsApp
+
+    </div>
+
+    <p>
+
+        © 2026 Shop Camzon. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

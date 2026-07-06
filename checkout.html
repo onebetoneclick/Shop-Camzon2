@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Shop Camzon</title>
+
+    <meta name="description" content="Complete your purchase securely with Shop Camzon.">
+
+    <link rel="icon" href="favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img src="https://i.ibb.co/b5nwfzZj/favicon-png.jpg" alt="Shop Camzon">
+
+            <span>SHOP CAMZON</span>
+
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="product.html">Products</a></li>
+
+            <li><a href="past-orders.html">Past Orders</a></li>
+
+            <li><a href="settings.html">Settings</a></li>
+
+        </ul>
+
+        <div class="nav-icons">
+
+            <button>🔍</button>
+
+            <a href="cart.html">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ===========================
+PAGE TITLE
+=========================== -->
+
+<section class="page-header">
+
+    <h1>Secure Checkout</h1>
+
+    <p>Complete your order in just a few steps.</p>
+
+</section>
+
+<!-- ===========================
+CHECKOUT
+=========================== -->
+
+<section class="checkout-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="checkout-form">
+
+        <!-- CUSTOMER -->
+
+        <div class="checkout-card">
+
+            <h2>Customer Information</h2>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="tel" placeholder="Phone Number">
+
+        </div>
+
+        <!-- SHIPPING -->
+
+        <div class="checkout-card">
+
+            <h2>Shipping Address</h2>
+
+            <input type="text" placeholder="Country">
+
+            <input type="text" placeholder="State / Region">
+
+            <input type="text" placeholder="City">
+
+            <input type="text" placeholder="Street Address">
+
+            <input type="text" placeholder="Postal Code">
+
+        </div>
+
+        <!-- DELIVERY -->
+
+        <div class="checkout-card">
+
+            <h2>Delivery Method</h2>
+
+            <label>
+
+                <input type="radio" name="delivery" checked>
+
+                Standard Delivery
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="delivery">
+
+                Express Delivery
+
+            </label>
+
+        </div>
+
+        <!-- PAYMENT -->
+
+        <div class="checkout-card">
+
+            <h2>Payment Method</h2>
+
+            <label>
+
+                <input type="radio" name="payment" checked>
+
+                Cash On Delivery
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="payment">
+
+                Bank Transfer
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="payment">
+
+                Mobile Money
+
+            </label>
+
+        </div>
+
+        <!-- NOTES -->
+
+        <div class="checkout-card">
+
+            <h2>Order Notes</h2>
+
+            <textarea rows="5" placeholder="Additional delivery instructions..."></textarea>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <aside class="order-summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-product">
+
+            <img src="https://i.ibb.co/XrpC3j0X/Whats-App-Image-2026-06-27-at-12-41-10-PM.jpg" alt="AI Smart Tripod">
+
+            <div>
+
+                <h3>AI Smart Tracking Tripod</h3>
+
+                <p>Qty: 1</p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Subtotal</span>
+
+            <span>CFA 27,000</span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Shipping</span>
+
+            <span>CFA 0</span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Discount</span>
+
+            <span>CFA 0</span>
+
+        </div>
+
+        <hr>
+
+        <div class="summary-row total">
+
+            <strong>Total</strong>
+
+            <strong>CFA 27,000</strong>
+
+        </div>
+
+        <button class="place-order-btn">
+
+            Place Order
+
+        </button>
+
+        <a href="cart.html" class="back-cart">
+
+            ← Back to Cart
+
+        </a>
+
+    </aside>
+
+</section>
+
+<!-- ===========================
+SECURITY
+=========================== -->
+
+<section class="checkout-security">
+
+    <div class="security-card">
+
+        🔒
+
+        <h3>Secure Checkout</h3>
+
+        <p>Your information is encrypted and protected.</p>
+
+    </div>
+
+    <div class="security-card">
+
+        🚚
+
+        <h3>Fast Delivery</h3>
+
+        <p>Reliable delivery to your location.</p>
+
+    </div>
+
+    <div class="security-card">
+
+        💬
+
+        <h3>24/7 Support</h3>
+
+        <p>We're always here to help.</p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        SHOP CAMZON
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Products</a>
+
+        <a href="cart.html">Cart</a>
+
+        <a href="checkout.html">Checkout</a>
+
+        <a href="past-orders.html">Past Orders</a>
+
+        <a href="settings.html">Settings</a>
+
+    </div>
+
+    <div class="footer-social">
+
+        Facebook
+
+        Instagram
+
+        WhatsApp
+
+    </div>
+
+    <p>
+
+        © 2026 Shop Camzon. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
